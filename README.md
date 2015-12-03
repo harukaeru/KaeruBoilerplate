@@ -25,7 +25,7 @@ $ cd res/django; git pull
 ```
 
 ## Usage
-```sh
+```html
 $ ./boiler html5
 <html>
     <head>
@@ -37,7 +37,7 @@ $ ./boiler html5
 </html>
 ```
 
-```sh
+```python
 $ ./boiler django/test
 from django.test import TestCase
 
