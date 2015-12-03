@@ -7,7 +7,7 @@ else
     filename="$BOILER_DIR$1"*
     count=$(ls $filename 2> /dev/null | wc -l)
     if [ $count -gt 1 ]; then
-        echo "\033[031mERROR: Same name files exist in $BOILER_DIR.\033[0m"
+        echo "\033[031mERROR: Same name files exist in res directory\033[0m"
         ls -F $filename | xargs -n 1 basename
         exit 1
     elif [ $count -lt 1 ]; then
@@ -15,7 +15,7 @@ else
         filename="$BOILER_LOCAL_DIR$1"*
         count=$(ls $filename 2> /dev/null | wc -l)
         if [ $count -gt 1 ]; then
-            echo "\033[031mERROR: Same name files exist in $BOILER_LOCAL_DIR.\033[0m"
+            echo "\033[031mERROR: Same name files exist in res_local directory.\033[0m"
             ls $filename | xargs -n 1 basename
             exit 1
         elif [ $count -lt 1 ]; then

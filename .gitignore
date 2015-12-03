@@ -2,3 +2,6 @@ res/*/
 res_local/*
 res_local/*/
 !res_local/example.txt
+**/__pycache__
+**/*.pyc
+test/.cache/*
