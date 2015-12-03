@@ -1,2 +1,3 @@
-src/you/*
-src/*.kaeru.*
+src/*.keronore.*
+src/keronore_*/*
+src/keronore-*/*
