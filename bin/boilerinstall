@@ -5,14 +5,14 @@ import subprocess
 
 
 try:
-    kaeru_package = json.load(open('kaeru_package.json'))
+    kaeru_package = json.load(open('../kaeru_package.json'))
 except:
     print("\033[031mERROR: Not found 'kaeru_package.json' in current directory. Please create the file.\033[0m")
     exit()
 
 current_dir = os.getcwd()
 for package_name, package_location in kaeru_package.items():
-    package = 'res/' + package_name
+    package = '../res/' + package_name
     if os.path.exists(package):
         print("\033[033mINFO: This package [%s] was already installed. Updating is called.\033[0m" % package_name)
         os.chdir(package)

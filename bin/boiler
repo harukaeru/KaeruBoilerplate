@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BOILER_DIR="$(dirname $0)/res/"
+BOILER_DIR="$(dirname $0)/../res/"
 if [ $# -lt 1 ]; then
     ls $BOILER_DIR
 else
