@@ -1,3 +1,4 @@
-src/*.keronore.*
-src/keronore_*/*
-src/keronore-*/*
+res/*/
+res_local/*
+res_local/*/
+!res_local/example.txt

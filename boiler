@@ -1,18 +1,29 @@
 #!/bin/sh
 
-BOILER_DIR="$(dirname $0)/src/"
+BOILER_DIR="$(dirname $0)/res/"
 if [ $# -lt 1 ]; then
     ls $BOILER_DIR
 else
     filename="$BOILER_DIR$1"*
-    count=$(ls $filename | wc -l)
+    count=$(ls $filename 2> /dev/null | wc -l)
     if [ $count -gt 1 ]; then
-        echo "\033[031mERROR: Same name files exist.\033[0m"
-        ls $filename | xargs -n 1 basename
+        echo "\033[031mERROR: Same name files exist in $BOILER_DIR.\033[0m"
+        ls -F $filename | xargs -n 1 basename
         exit 1
     elif [ $count -lt 1 ]; then
-        echo "\033[031mERROR: No boilerplate files exist such a name, [$1*].\033[0m"
-        exit 1
+        BOILER_LOCAL_DIR="$(dirname $0)/res_local/"
+        filename="$BOILER_LOCAL_DIR$1"*
+        count=$(ls $filename 2> /dev/null | wc -l)
+        if [ $count -gt 1 ]; then
+            echo "\033[031mERROR: Same name files exist in $BOILER_LOCAL_DIR.\033[0m"
+            ls $filename | xargs -n 1 basename
+            exit 1
+        elif [ $count -lt 1 ]; then
+            echo "\033[031mERROR: No boilerplate files exist such a name, [$1*].\033[0m"
+            exit 1
+        else
+            cat $filename
+        fi
     else
         cat $filename
     fi
