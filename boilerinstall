@@ -10,14 +10,19 @@ except:
     print("\033[031mERROR: Not found 'kaeru_package.json' in current directory. Please create the file.\033[0m")
     exit()
 
+current_dir = os.getcwd()
 for package_name, package_location in kaeru_package.items():
     package = 'res/' + package_name
     if os.path.exists(package):
         print("\033[033mINFO: This package [%s] was already installed. Updating is called.\033[0m" % package_name)
-        subprocess.call(['cd', package, ';', 'git', 'pull'])
+        os.chdir(package)
+        subprocess.call(['git', 'pull'])
     else:
         result = subprocess.call(['git', 'clone', package_location, 'res/' + package_name])
         if result == 0:
             print("\033[032mINFO: This package [%s] is installed!!\033[0m" % package_name)
         else:
             print("\033[031mERROR: Installing this package [%s] is failed\033[0m" % package_name)
+
+    os.chdir(current_dir)
+print("\033[032mINFO: All tasks are done\033[0m.")
