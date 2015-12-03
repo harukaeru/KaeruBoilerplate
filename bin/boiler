@@ -2,7 +2,10 @@
 
 BOILER_DIR="$(dirname $0)/../res/"
 if [ $# -lt 1 ]; then
-    ls $BOILER_DIR
+    echo "\033[32mRES\033[0m"
+    ls -F $BOILER_DIR
+    echo "\n\033[32mRES_LOCAL\033[0m"
+    ls -F "$(dirname $0)/../res_local/"
 else
     filename="$BOILER_DIR$1"*
     count=$(ls $filename 2> /dev/null | wc -l)
