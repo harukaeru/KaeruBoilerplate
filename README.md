@@ -14,7 +14,7 @@ $ ./boiler html5
 </html>
 ```
 ```sh
-$ boiler django/test
+$ ./boiler django/test
 from django.test import TestCase
 
 
