@@ -50,4 +50,4 @@ class FooTestCase(TestCase):
         self.fail()
 ```
 
-If you set env `export PATH=$PATH:/path/to/KaeruBoilerplate/bin/`, you can also run like `boiler django/test`.
+If you set env `export PATH=$PATH:/path/to/KaeruBiolerplate/bin/`, you can also run like `boiler django/test`.

@@ -11,7 +11,7 @@ else
         ls -F $filename | xargs -n 1 basename
         exit 1
     elif [ $count -lt 1 ]; then
-        BOILER_LOCAL_DIR="$(dirname $0)/res_local/"
+        BOILER_LOCAL_DIR="$(dirname $0)/../res_local/"
         filename="$BOILER_LOCAL_DIR$1"*
         count=$(ls $filename 2> /dev/null | wc -l)
         if [ $count -gt 1 ]; then
