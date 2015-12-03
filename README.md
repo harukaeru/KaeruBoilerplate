@@ -3,7 +3,7 @@ Boilerplate files for myself
 
 ## Install
 ```sh
-$ ./boilerinstall
+$ ./bin/boilerinstall
 ```
 This script loads "kaeru_package.json". Then download with 'git clone' and install to 'res/' directory.
 
@@ -26,7 +26,7 @@ $ cd res/django; git pull
 
 ## Usage
 ```html
-$ ./boiler html5
+$ ./bin/boiler html5
 <html>
     <head>
         <style>
@@ -38,7 +38,7 @@ $ ./boiler html5
 ```
 
 ```python
-$ ./boiler django/test
+$ ./bin/boiler django/test
 from django.test import TestCase
 
 
@@ -49,3 +49,5 @@ class FooTestCase(TestCase):
     def test_(self):
         self.fail()
 ```
+
+If you set env `export PATH=$PATH:/path/to/KaeruBoilerplate/bin/`, you can also run like `boiler django/test`.
