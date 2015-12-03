@@ -13,3 +13,15 @@ $ ./boiler html5
     </body>
 </html>
 ```
+```sh
+$ boiler django/test
+from django.test import TestCase
+
+
+class FooTestCase(TestCase):
+    def setUp(self):
+        pass
+
+    def test_(self):
+        self.fail()
+```
