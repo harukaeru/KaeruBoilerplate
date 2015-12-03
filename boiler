@@ -1,0 +1,23 @@
+#!/bin/sh
+
+###############################################################
+#       Usage e.g.: sh ~/KaeruBoilerplate/boiler $1           #
+###############################################################
+
+BOILER_DIR="$(dirname $0)/src/"
+if [ $# -lt 1 ]; then
+    ls $BOILER_DIR
+else
+    filename="$BOILER_DIR$1"*
+    count=$(ls $filename | wc -l)
+    if [ $count -gt 1 ]; then
+        echo "\033[031mERROR: Same name files exist.\033[0m"
+        ls $filename | xargs -n 1 basename
+        exit 1
+    elif [ $count -lt 1 ]; then
+        echo "\033[031mERROR: No boilerplate files exist such a name, [$1*].\033[0m"
+        exit 1
+    else
+        cat $filename
+    fi
+fi
