@@ -1,0 +1,3 @@
+#!/bin/sh
+flake8 ./*.py || echo "\033[031mFAILED\033[0m"
+py.test

@@ -32,4 +32,4 @@ for package_name, package_location in kaeru_package.items():
             print("\033[031mERROR: Installing this package [%s] is failed\033[0m" % package_name)
 
     os.chdir(current_dir)
-print("\033[032mINFO: All tasks are done\033[0m.")
+print("\033[032mINFO: All tasks are done.\033[0m")
