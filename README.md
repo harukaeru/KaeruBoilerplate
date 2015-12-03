@@ -1,6 +1,12 @@
 # KaeruBoilerplate
 Boilerplate files for myself
 
+## Install
+```sh
+./boilerinstall
+```
+This script loads "kaeru_package.json". Then download with 'git clone' and install to 'res/' directory.
+
 ## Usage
 ```sh
 $ ./boiler html5
@@ -13,6 +19,7 @@ $ ./boiler html5
     </body>
 </html>
 ```
+
 ```sh
 $ ./boiler django/test
 from django.test import TestCase
