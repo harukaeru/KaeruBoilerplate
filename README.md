@@ -1,2 +1,2 @@
 # KaeruBoilerplate
-Boilerplate file for myself
+Boilerplate files for myself
