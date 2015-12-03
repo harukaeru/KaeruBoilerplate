@@ -3,9 +3,28 @@ Boilerplate files for myself
 
 ## Install
 ```sh
-./boilerinstall
+$ ./boilerinstall
 ```
 This script loads "kaeru_package.json". Then download with 'git clone' and install to 'res/' directory.
+
+If "kaeru_package.json" is the following, 
+
+*kaeru_package.json*
+```json
+{
+    "django": "https://github.com/harukaeru/django"
+}
+```
+
+this script will run the following command.
+
+```sh
+$ git clone https://github.com/harukaeru/django res/django
+
+ or 
+
+$ cd res/django; git pull
+```
 
 ## Usage
 ```sh
