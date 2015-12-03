@@ -8,8 +8,6 @@ $ ./boilerinstall
 This script loads "kaeru_package.json". Then download with 'git clone' and install to 'res/' directory.
 
 If "kaeru_package.json" is the following, 
-
-*kaeru_package.json*
 ```json
 {
     "django": "https://github.com/harukaeru/django"
